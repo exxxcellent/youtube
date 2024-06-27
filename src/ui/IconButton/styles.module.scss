@@ -1,0 +1,7 @@
+.btn_dark {
+    @apply flex items-center justify-center w-10 h-10 bg-darkgray rounded-full p-1 hover:bg-lightgray duration-100
+}
+
+.btn_light {
+    @apply flex items-center justify-center w-10 h-10 bg-black rounded-full p-1 hover:bg-darkgray duration-100
+}

@@ -1,12 +1,12 @@
-import Header from "@/components/Header/Header"
-import { Metadata } from "next"
+// types
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Главная | YouTube"
 }
 
-export default function HomePage() {
+export default function FeedPage() {
     return <>
-        <Header />
+        <h1>Feed page</h1>
     </>
 }
