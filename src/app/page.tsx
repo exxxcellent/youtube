@@ -1,3 +1,10 @@
+import Test from './Test';
+
 export default function Home() {
-    return <div>Home</div>;
+    const API_KEY = process.env.API_KEY;
+    return (
+        <div>
+            <Test apiKey={API_KEY ? API_KEY : ''} />
+        </div>
+    );
 }
