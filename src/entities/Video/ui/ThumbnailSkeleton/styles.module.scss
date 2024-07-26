@@ -1,0 +1,37 @@
+.wrapper {
+    @apply list-none flex flex-col gap-4 h-auto lt:px-6 sm:px-0;
+
+    .image {
+        @apply bg-darkgray h-52 w-full rounded-xl bg-gradient-to-r from-lightgray to-darkgray animate-pulse;
+    }
+
+    .info {
+        @apply flex justify-between gap-4;
+
+        .channel {
+            @apply w-9 h-9;
+            .avatar {
+                @apply w-9 h-9 bg-darkgray rounded-full bg-gradient-to-r from-lightgray to-darkgray animate-pulse;
+            }
+        }
+
+        .description {
+            @apply flex flex-col gap-4 animate-pulse w-full;
+            .title {
+                @apply bg-darkgray h-5 w-full rounded-xl bg-gradient-to-r from-lightgray to-darkgray animate-pulse;
+            }
+            .views {
+                @apply bg-darkgray h-5 w-2/3 rounded-xl bg-gradient-to-r from-lightgray to-darkgray animate-pulse;
+            }
+        }
+    }
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: center center;
+    }
+    100% {
+        background-position: 100% 100px;
+    }
+}
