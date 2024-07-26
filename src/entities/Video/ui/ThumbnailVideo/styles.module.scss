@@ -1,0 +1,46 @@
+.wrapper {
+    @apply h-auto list-none mb:w-full lt:px-6 sm:px-0 xl:w-full;
+
+    .video {
+        @apply h-auto mb:w-full relative bg-cover rounded-xl aspect-video;
+
+        .duration {
+            @apply absolute right-2 bottom-1 text-xs bg-black p-1 rounded-md;
+        }
+    }
+
+    .info {
+        @apply w-full grid grid-cols-12 py-3;
+
+        .avatar {
+            @apply w-9 h-9 bg-cover rounded-full col-span-1;
+        }
+
+        .description {
+            @apply col-span-10 px-3;
+            .title {
+                @apply mb:text-sm sm:text-sm md:text-base font-medium text-wrap text-ellipsis pb-1;
+            }
+
+            .description_additional {
+                @apply flex mb:gap-4 items-center lg:flex-col lg:items-start xl:gap-1;
+            }
+
+            .channel {
+                @apply text-gray mb:text-xs lt:text-sm xl:text-xs 2xl:text-sm;
+            }
+
+            .views {
+                @apply flex gap-2 mb:text-xs lt:text-sm xl:text-xs 2xl:text-sm text-gray mb:text-nowrap;
+
+                span {
+                    @apply flex items-center gap-1;
+                }
+            }
+        }
+
+        .button {
+            @apply col-span-1;
+        }
+    }
+}

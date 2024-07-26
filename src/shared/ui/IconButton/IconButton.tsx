@@ -27,9 +27,7 @@ export default function IconButton({
             </button>
             {title !== '' && hover == true ? (
                 <div className={styles.title}>{title}</div>
-            ) : (
-                ''
-            )}
+            ) : null}
         </div>
     );
 }

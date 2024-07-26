@@ -1,6 +1,5 @@
 .header {
-    width: 100%;
-    @apply flex justify-between items-center px-5 py-3 bg-black z-50 fixed;
+    @apply flex justify-between items-center py-3 px-5 bg-black z-50 fixed w-full;
 }
 
 .logo {

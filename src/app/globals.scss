@@ -23,7 +23,7 @@ body {
 }
 
 .page {
-    @apply w-10/12 px-5 flex absolute right-0;
+    @apply w-full xl:w-10/12 px-5 flex absolute right-0;
 }
 
 .error {

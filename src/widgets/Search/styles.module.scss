@@ -1,5 +1,5 @@
 .form {
-    @apply flex gap-3;
+    @apply gap-3 hidden md:flex;
 }
 
 .field {

@@ -1,0 +1,11 @@
+.button {
+    @apply flex flex-col gap-1 items-center justify-center w-14 h-14 bg-black rounded-full p-1 hover:bg-lightgray duration-100;
+
+    svg {
+        @apply w-7 h-7;
+    }
+
+    span {
+        @apply text-white text-sm hidden lt:inline;
+    }
+}

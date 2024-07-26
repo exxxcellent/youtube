@@ -26,9 +26,9 @@ import {
     BiVideoRecording,
 } from 'react-icons/bi';
 // media
-import studio from '../../assets/studio.svg';
-import music from '../../assets/music.svg';
-import kids from '../../assets/kids.svg';
+import studio from '@/assets/studio.svg';
+import music from '@/assets/music.svg';
+import kids from '@/assets/kids.svg';
 // styles
 import styles from './styles.module.scss';
 // ui
