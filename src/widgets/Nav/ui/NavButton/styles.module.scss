@@ -1,0 +1,7 @@
+.button {
+    @apply flex items-center gap-5 w-full px-3 py-2 bg-black rounded-xl hover:bg-darkgray duration-100;
+}
+
+.title {
+    font-size: 14px;
+}

@@ -6,6 +6,7 @@ import { Roboto } from 'next/font/google';
 import './globals.scss';
 // widgets
 import Header from '@/widgets/Header/Header';
+import Nav from '@/widgets/Nav/Nav';
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
             <body className={roboto.className}>
                 <Header />
                 <main className="main">
+                    <Nav />
                     <div className="page">{children}</div>
                 </main>
             </body>

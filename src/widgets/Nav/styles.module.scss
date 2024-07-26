@@ -1,0 +1,28 @@
+.nav {
+    @apply flex flex-col w-2/12 h-full fixed overflow-scroll pb-10;
+
+    &::-webkit-scrollbar {
+        @apply w-0;
+    }
+
+    &:hover::-webkit-scrollbar {
+        @apply w-3;
+    }
+
+    &::-webkit-scrollbar-track {
+        @apply bg-black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @apply bg-gray rounded-lg border-black border-solid;
+    }
+}
+
+.list {
+    @apply flex flex-col items-start border-b border-b-lightgray py-3 px-5;
+}
+
+.title {
+    font-size: 16px;
+    @apply font-medium px-3 pb-1;
+}
