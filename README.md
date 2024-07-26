@@ -8,12 +8,14 @@ Application:
 
 -   React
 -   Next.js
+-   TypeScript
 
 Styles:
 
 -   Tailwind
 -   SCSS
 -   css-modules
+-   react-icons
 
 Data fetching:
 
