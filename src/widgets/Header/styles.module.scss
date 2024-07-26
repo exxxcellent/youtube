@@ -1,0 +1,8 @@
+.header {
+    width: 100%;
+    @apply flex justify-between items-center px-5 py-3 bg-black z-50 fixed;
+}
+
+.logo {
+    @apply flex gap-5 items-center;
+}

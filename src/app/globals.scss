@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-black text-white;
+
+    &::-webkit-scrollbar {
+        @apply w-3;
+    }
+
+    &::-webkit-scrollbar-track {
+        @apply bg-black;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @apply bg-gray rounded-lg border-black border-solid;
+    }
+}
+
+.main {
+    @apply py-14;
+}
+
+.page {
+    @apply w-10/12 px-5 flex absolute right-0;
+}
+
+.error {
+    height: calc(100vh - 66px);
+
+    h1 {
+        font-size: 96px;
+        @apply font-semibold;
+    }
+
+    span {
+        @apply text-xl;
+    }
+
+    a {
+        @apply text-blue hover:text-white duration-100;
+    }
+
+    @apply w-full flex flex-col justify-center items-center;
+}

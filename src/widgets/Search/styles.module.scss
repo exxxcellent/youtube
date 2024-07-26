@@ -1,0 +1,19 @@
+.form {
+    @apply flex gap-3;
+}
+
+.field {
+    @apply flex items-center px-4;
+}
+
+.input {
+    @apply bg-black text-white py-2 outline-none w-1/3 md:w-72 xl:w-96;
+}
+
+.icon {
+    @apply w-5 h-5;
+}
+
+.btn_search {
+    @apply px-5 flex justify-center items-center h-10 bg-darkgray hover:bg-lightgray duration-100;
+}
