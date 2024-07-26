@@ -1,5 +1,5 @@
 .nav {
-    @apply flex flex-col w-2/12 h-full fixed overflow-scroll pb-10;
+    @apply hidden xl:flex flex-col w-2/12 h-full fixed overflow-scroll pb-10;
 
     &::-webkit-scrollbar {
         @apply w-0;

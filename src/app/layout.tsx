@@ -7,6 +7,7 @@ import './globals.scss';
 // widgets
 import Header from '@/widgets/Header/Header';
 import Nav from '@/widgets/Nav/Nav';
+import MobileNav from '@/widgets/MobileNav/MobileNav';
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
                 <main className="main">
                     <Nav />
                     <div className="page">{children}</div>
+                    <MobileNav />
                 </main>
             </body>
         </html>

@@ -2,10 +2,6 @@
     @apply relative flex flex-col items-center justify-center;
 
     .btn_dark {
-        svg {
-            @apply w-5 h-5;
-        }
-
         @apply relative flex items-center justify-center w-10 h-10 bg-darkgray rounded-full p-1 hover:bg-lightgray duration-100;
     }
 
@@ -18,10 +14,9 @@
 
     .btn_light {
         @apply relative flex items-center justify-center w-10 h-10 bg-black rounded-full p-1 hover:bg-darkgray duration-100;
-
-        svg {
-            @apply w-5 h-5;
-        }
+    }
+    svg {
+        @apply w-5 h-5;
     }
 }
 

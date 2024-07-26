@@ -4,7 +4,7 @@ import Image from 'next/image';
 // styles
 import styles from './styles.module.scss';
 // icons
-import { BiBell, BiHappy, BiMenu, BiVideoPlus } from 'react-icons/bi';
+import { BiBell, BiHappy, BiMenu, BiSearch, BiVideoPlus } from 'react-icons/bi';
 // media
 import logo from '@/assets/youtube.svg';
 // components
@@ -16,9 +16,11 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <IconButton mode="light">
-                    <BiMenu className="w-7 h-7" />
-                </IconButton>
+                <div className="hidden lg:block">
+                    <IconButton mode="light">
+                        <BiMenu />
+                    </IconButton>
+                </div>
                 <Link
                     href="/"
                     title="Главная страница Youtube">
@@ -32,19 +34,30 @@ export default function Header() {
             </div>
             <Search />
             <div className="flex">
-                <IconButton
-                    title="Создать"
-                    mode="light">
-                    <BiVideoPlus />
-                </IconButton>
+                <div className="hidden lg:block">
+                    <IconButton
+                        title="Создать"
+                        mode="light">
+                        <BiVideoPlus />
+                    </IconButton>
+                </div>
+                <div className="block md:hidden">
+                    <IconButton
+                        title="Поиск"
+                        mode="light">
+                        <BiSearch />
+                    </IconButton>
+                </div>
                 <IconButton
                     title="Уведомления"
                     mode="light">
                     <BiBell />
                 </IconButton>
-                <IconButton mode="light">
-                    <BiHappy />
-                </IconButton>
+                <div className="hidden lg:block">
+                    <IconButton mode="light">
+                        <BiHappy />
+                    </IconButton>
+                </div>
             </div>
         </header>
     );
