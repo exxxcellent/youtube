@@ -3,6 +3,7 @@ export interface useVideosParams {
     chart: 'chartUnspecified' | 'mostPopular';
     maxResults: number;
     regionCode: string;
+    videoCategoryId: string | null;
 }
 
 export interface useVideosReturn<Data> {
