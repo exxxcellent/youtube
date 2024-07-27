@@ -1,0 +1,15 @@
+.categories {
+    @apply flex gap-3 py-4 px-5 fixed bg-black z-10 right-0 w-full xl:w-10/12 overflow-auto;
+
+    &::-webkit-scrollbar {
+        @apply xl:h-0 h-0;
+    }
+
+    &:hover::-webkit-scrollbar {
+        @apply xl:h-[5px];
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @apply bg-gray rounded-lg;
+    }
+}

@@ -1,0 +1,13 @@
+.category {
+    label {
+        @apply py-2 px-3 bg-darkgray rounded-xl text-sm hover:bg-lightgray duration-100 cursor-pointer text-nowrap select-none;
+    }
+
+    input {
+        @apply absolute w-0 h-0;
+
+        &:checked ~ label {
+            @apply bg-white text-black;
+        }
+    }
+}

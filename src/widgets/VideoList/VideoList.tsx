@@ -12,7 +12,7 @@ export default function VideoList() {
     const { data, isLoading, error } = useVideos({});
 
     return (
-        <div className="py-16 w-full">
+        <div className="py-16 xl:py-20 w-full">
             {error ? <div>{error.message}</div> : null}
 
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-y-5 lg:mx-auto">
