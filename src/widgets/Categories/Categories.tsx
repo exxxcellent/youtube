@@ -19,6 +19,7 @@ export default function Categories() {
                 : null}
             {data?.data.items.map((category: CategoryProps) => (
                 <Category
+                    id={category.id}
                     key={category.snippet.title}
                     snippet={category.snippet}
                 />

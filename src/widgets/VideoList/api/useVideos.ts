@@ -15,6 +15,7 @@ export function useVideos<Data>({
     chart = 'mostPopular',
     maxResults = 40,
     regionCode = 'RU',
+    videoCategoryId = '',
 }: Partial<useVideosParams>): useVideosReturn<Data> {
     const fetcher = async (url: string) =>
         await axios.get<Data>(url, {
@@ -27,7 +28,10 @@ export function useVideos<Data>({
             },
         });
 
-    const { data, isLoading, error } = useSWR(`${BASE_URL}/videos/`, fetcher);
+    const { data, isLoading, error } = useSWR(
+        `${BASE_URL}/videos/?videoCategoryId=${videoCategoryId}`,
+        fetcher,
+    );
 
     return { data, isLoading, error };
 }
