@@ -1,0 +1,7 @@
+.category {
+    @apply w-full h-6;
+
+    div {
+        @apply bg-darkgray rounded-xl cursor-pointer h-full w-full bg-gradient-to-r from-lightgray to-darkgray animate-pulse;
+    }
+}
