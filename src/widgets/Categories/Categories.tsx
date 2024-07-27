@@ -13,7 +13,7 @@ export default function Categories() {
         <form className={styles.categories}>
             {error ? <div>{error.message}</div> : null}
             {isLoading
-                ? new Array(16)
+                ? new Array(10)
                       .fill(0)
                       .map((_, i) => <CategorySkeleton key={i} />)
                 : null}
