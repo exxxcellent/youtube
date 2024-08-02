@@ -22,7 +22,7 @@ export default function ThumbnailVideo({
         <Link
             href={{
                 pathname: '/watch',
-                query: { v: id },
+                query: { v: id.videoId },
             }}
             className={styles.wrapper}>
             <div
