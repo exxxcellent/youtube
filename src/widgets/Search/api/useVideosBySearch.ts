@@ -4,19 +4,20 @@ import axios from 'axios';
 import useSWR from 'swr';
 // types
 import type {
-    useVideosParams,
-    useVideosReturn,
-} from '../models/useVideos.interface';
+    useVideosBySearchReturn,
+    useVideosBySearchParams,
+} from '../models/useVideosBySearch.interface';
 // contants
 import { API_KEY, BASE_URL } from '@/constants';
 
-export function useVideos<Data>({
-    part = 'snippet, contentDetails, statistics, id',
+export function useVideosBySearch<Data>({
+    q = '',
+    part = 'snippet, id',
     chart = 'mostPopular',
     maxResults = 40,
     regionCode = 'RU',
-    videoCategoryId = '0',
-}: Partial<useVideosParams>): useVideosReturn<Data> {
+    relevanceLanguage = 'ru',
+}: Partial<useVideosBySearchParams>): useVideosBySearchReturn<Data> {
     const fetcher = async (url: string) =>
         await axios.get<Data>(url, {
             params: {
@@ -25,13 +26,12 @@ export function useVideos<Data>({
                 chart,
                 maxResults,
                 regionCode,
+                relevanceLanguage,
+                q,
             },
         });
 
-    const { data, isLoading, error } = useSWR(
-        `${BASE_URL}/videos/?videoCategoryId=${videoCategoryId}`,
-        fetcher,
-    );
+    const { data, isLoading, error } = useSWR(`${BASE_URL}/search/`, fetcher);
 
     return { data, isLoading, error };
 }
