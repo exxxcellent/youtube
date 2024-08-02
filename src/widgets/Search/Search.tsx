@@ -1,6 +1,8 @@
 'use client';
 // react
 import { useRef, useState } from 'react';
+// next
+import Link from 'next/link';
 // styles
 import styles from './styles.module.scss';
 // icons
@@ -10,6 +12,7 @@ import IconButton from '@/shared/ui/IconButton/IconButton';
 
 export default function Search() {
     const [focus, setFocus] = useState(false);
+    const inputRef = useRef<HTMLInputElement>(null);
     const searchRef = useRef<HTMLInputElement>(null);
 
     function handleFocus(state: boolean) {
@@ -35,19 +38,23 @@ export default function Search() {
                         className={styles.input}
                         type="search"
                         placeholder="Введите запрос"
+                        ref={inputRef}
                         onFocus={() => handleFocus(true)}
                         onBlur={() => handleFocus(false)}
-                        onChange={(e) => e.preventDefault()}
                     />
                     <button>
                         <BiSolidKeyboard className={styles.icon} />
                     </button>
                 </div>
-                <button
+                <Link
+                    href={{
+                        pathname: '/results',
+                        query: { query: inputRef.current?.value },
+                    }}
                     title="Введите запрос"
                     className={styles.btn_search}>
                     <BiSearch className={styles.icon} />
-                </button>
+                </Link>
             </div>
             <IconButton title="Голосовой поиск">
                 <BiSolidMicrophone />

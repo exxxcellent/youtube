@@ -1,5 +1,8 @@
 export interface VideoSnippet {
-    id: string;
+    id: {
+        videoId: string;
+        playlistId: string;
+    };
     snippet: {
         title: string;
         thumbnails: {

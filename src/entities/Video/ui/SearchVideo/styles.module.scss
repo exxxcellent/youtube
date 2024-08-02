@@ -1,0 +1,19 @@
+.wrapper {
+    @apply h-auto grid grid-cols-12 gap-x-5;
+
+    .video {
+        @apply col-span-5 h-auto mb:w-full relative bg-cover rounded-xl aspect-video;
+
+        .duration {
+            @apply absolute right-2 bottom-1 text-xs bg-black p-1 rounded-md;
+        }
+    }
+
+    .info {
+        @apply col-span-7 w-full;
+
+        .header {
+            @apply flex justify-between;
+        }
+    }
+}
