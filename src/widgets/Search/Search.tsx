@@ -49,7 +49,7 @@ export default function Search() {
                 <Link
                     href={{
                         pathname: '/results',
-                        query: { query: inputRef.current?.value },
+                        query: { query: inputRef.current?.value || '' },
                     }}
                     title="Введите запрос"
                     className={styles.btn_search}>
