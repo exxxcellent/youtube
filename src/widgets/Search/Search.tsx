@@ -47,14 +47,7 @@ export default function Search() {
                     </button>
                 </div>
                 <Link
-                    href={{
-                        pathname: '/results',
-                        query: {
-                            query: inputRef.current?.value
-                                ? inputRef.current?.value
-                                : '',
-                        },
-                    }}
+                    href={`/results/?query=${inputRef.current?.value}`}
                     title="Введите запрос"
                     className={styles.btn_search}>
                     <BiSearch className={styles.icon} />
